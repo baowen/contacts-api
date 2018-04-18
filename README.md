@@ -27,3 +27,12 @@ Database where you can add, get or remove contacts with JSON showing RESTful web
 ### Version ###
 
 http://localhost:3000/api/version returns a configuration value that is read from external config file.
+
+### Build and run Docker container ###
+Docker container is packaged with tag contact-rest with following command:
+
+`docker build . -t contact-rest`
+
+Docker container is run with exposing port 3000 from the container to port 9000 on host with following command:
+
+`docker run -e VERSION=1.1 -p 9000:3000 contact-rest`
